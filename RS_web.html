@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RS Community</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      background:#0e0f13; /* not pure black */
+      color:#e5e7eb;
+      font-family:'Poppins',sans-serif;
+    }
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 40px;
+      background:linear-gradient(135deg,#0f131a,#141a24);
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    .logo{
+      font-family:'Orbitron',sans-serif;
+      font-size:28px;
+      font-weight:800;
+      letter-spacing:2px;
+      color:#6cf2c2;
+      text-shadow:0 0 15px rgba(108,242,194,0.25);
+    }
+    nav a{
+      color:#e5e7eb;
+      text-decoration:none;
+      margin-left:25px;
+      font-weight:500;
+      position:relative;
+    }
+    nav a::after{
+      content:"";
+      position:absolute;
+      bottom:-6px;
+      left:0;
+      width:0;
+      height:2px;
+      background:#6cf2c2;
+      transition:0.3s;
+    }
+    nav a:hover::after{width:100%;}
+
+    section{
+      padding:90px 10%;
+      border-bottom:1px solid #1a2433;
+    }
+
+    h1,h2,h3{font-family:'Orbitron',sans-serif;letter-spacing:1px;}
+    h1{font-size:48px;}
+    h2{font-size:32px;margin-bottom:20px;color:#6cf2c2;}
+    p{line-height:1.8;color:#c9d1d9;}
+
+    .btn{
+      display:inline-block;
+      padding:14px 24px;
+      border-radius:8px;
+      background:#6cf2c2;
+      color:#08110d;
+      font-weight:600;
+      text-decoration:none;
+      margin-top:20px;
+      transition:0.3s;
+    }
+    .btn:hover{transform:translateY(-3px);box-shadow:0 0 18px rgba(108,242,194,0.4);}
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      margin-top:30px;
+    }
+    .card{
+      background:#111826;
+      padding:25px;
+      border-radius:16px;
+      border:1px solid #1f2b40;
+      transition:0.3s;
+    }
+    .card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 8px 25px rgba(0,0,0,0.4);
+      border:1px solid #6cf2c2;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px;
+      background:#0c1017;
+      color:#7a8597;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">RS COMMUNITY</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#community">Community</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home">
+  <h1>Welcome to RS Community</h1>
+  <p>For improving coding together, learning new things, making friends, and also playing online games chill together.</p>
+  <a class="btn" href="https://discord.gg/6hX733QJ" target="_blank">Join Discord</a>
+</section>
+
+<section id="about">
+  <h2>About RS Community</h2>
+  <p>RS Community was built to bring together coders, gamers, and creators who want to grow, learn and build projects together in a friendly environment.</p>
+
+  <h3>💬 Coding Motivation</h3>
+  <p>“Every error you fix is one step closer to mastery.”</p>
+
+  <h3>📝 Poem of Code & Game Dev</h3>
+  <p>
+    In lines of code our dreams ignite,<br/>
+    Bugs and errors, day and night.<br/>
+    Worlds we build from ones and zero,<br/>
+    Every dev becomes a hero.
+  </p>
+</section>
+  <div class="container">
+    <header>
+      <div class="logo">RS COMMUNITY</div>
+      <nav>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('aboutPage')">About</a>
+        <a href="#" onclick="showPage('communityPage')">Community</a>
+      </nav>
+    </header>
+
+    <!-- HOME PAGE -->
+<section id="home" class="page active hero">
+  <h1>RS COMMUNITY</h1>
+  <p>For improving coding together, learning new things, making friends, and chilling with online games.</p>
+  <div class="actions">
+    <a class="btn primary" href="https://discord.gg/6hX733QJ" target="_blank">Join Discord</a>
+    <a class="btn secondary" href="https://www.facebook.com/share/1GXawGyfhT/?mibextid=wwXIfr" target="_blank">Visit Facebook</a>
+  </div>
+</section>
+
+<!-- ABOUT PAGE -->
+<section id="aboutPage" class="page grid" style="display:none;">
+  <div class="card">
+    <h3>💻 About RS Community</h3>
+    <p>We are a group that grows together through code, creativity, games, and ideas. Everyone here helps each other level up.</p>
+    <p><strong>Motivational Quote:</strong><br>
+    "Code is not just a language, it is the voice of your imagination."</p>
+    <p><strong>Poem:</strong><br>
+    Lines of logic, clean and true,<br>
+    Dreams in code come into view.<br>
+    Games we build from night to dawn,<br>
+    In RS Community, legends are born.</p>
+  </div>
+  <div class="card">
+    <h3>📧 Contact</h3>
+    <p>Email: <a href="mailto:vanndarasy4@gmail.com">vanndarasy4@gmail.com</a></p>
+  </div>
+</section>
+
+<!-- COMMUNITY PAGE -->
+<section id="communityPage" class="page grid" style="display:none;">
+  <div class="card">
+    <h3>👥 Our Community</h3>
+    <p>Here we chat, code, share memes, play together, and build real friendships online.</p>
+    <img src="RobloxScreenShot20251117_214214058.png" alt="Community" />
+  </div>
+  <div class="card">
+    <h3>🌐 Quick Links</h3>
+    <p>
+      • <a href="https://discord.gg/6hX733QJ" target="_blank">Join Discord</a><br>
+      • <a href="https://www.facebook.com/share/1GXawGyfhT/?mibextid=wwXIfr" target="_blank">Facebook Page</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2025 RS Community — Built with passion by the community
+</footer>
+
+<script>
+  function showPage(pageId){
+    document.querySelectorAll('.page').forEach(p=>p.style.display='none');
+    document.getElementById(pageId).style.display='block';
+  }
+</script>
+  </div>
+<section id="community">
+  <h2>RS Community</h2>
+  <p>RS Community is a place for improving coding together, learning new things, making friends, and also playing online games chill together.</p>
+  <div class="cards">
+    <div class="card"><h3>🎮 Gaming Together</h3><p>Play online games together in a positive environment.</p></div>
+    <div class="card"><h3>💻 Learn Coding</h3><p>Practice coding and game development with others.</p></div>
+    <div class="card"><h3>🤝 Make Friends</h3><p>Meet people who share your interest in tech.</p></div>
+  </div>
+</section>
+<section id="mission">
+  <h2>Our Mission & Vision</h2>
+  <p>Our mission is to build a strong and creative coding and gaming community.</p>
+  <p>Our vision is to help members grow into developers and creators.</p>
+</section>
+<section id="rules">
+  <h2>Community Rules</h2>
+  <ul>
+    <li>Be respectful to all members</li>
+    <li>No toxic behavior</li>
+    <li>Help and support each other</li>
+    <li>No cheating or scam</li>
+  </ul>
+</section>
+<section id="learn">
+  <h2>What You Can Learn</h2>
+  <div class="cards">
+    <div class="card">HTML & CSS</div>
+    <div class="card">JavaScript</div>
+    <div class="card">Python</div>
+    <div class="card">Game Development</div>
+  </div>
+</section>
+<section id="faq">
+  <h2>FAQ</h2>
+  <p><strong>How to join?</strong> Click the Discord link.</p>
+  <p><strong>Is it free?</strong> Yes.</p>
+</section>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:vanndarasy4@gmail.com">vanndarasy4@gmail.com</a></p>
+  <p><a href="https://www.facebook.com/share/1GXawGyfhT/?mibextid=wwXIfr" target="_blank">Facebook</a></p>
+  <p><a href="https://discord.gg/6hX733QJ" target="_blank">Discord</a></p>
+</section>
+</body>
+</html>
